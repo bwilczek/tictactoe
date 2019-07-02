@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class GreetingController {
 
-    val counter = AtomicLong()
+  val counter = AtomicLong()
 
-    @RequestMapping("/greeting")
-    fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String) =
-            Greeting(counter.incrementAndGet(), "Hello, $name")
+  @RequestMapping("/greeting")
+  fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String) =
+    Greeting(counter.incrementAndGet(), "Hello, $name")
 
 }
